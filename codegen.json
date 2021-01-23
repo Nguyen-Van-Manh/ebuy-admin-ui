@@ -1,0 +1,22 @@
+{
+  "overwrite": true,
+  "config": {
+    "strict": true
+  },
+  "generates": {
+    "generated/generate-types.ts": {
+      "schema": "https://ebuy-ecommerce.herokuapp.com/graphql",
+      "documents": ["./graphql/**/*.graphql.ts", "./graphql/*.graphql.ts"],
+      "plugins": [
+        {
+          "add": {
+            "content": "/* eslint-disable */"
+          }
+        },
+        "typescript",
+        "typescript-compatibility",
+        "typescript-operations"
+      ]
+    }
+  }
+}
