@@ -5,12 +5,12 @@
   "author": "Nguyen Van Manh",
   "license": "MIT",
   "engines": {
-    "node": "14.15.1"
+    "node": ">=14.x"
   },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "heroku-postbuild": "yarn run build",
     "generate-types": "graphql-codegen --config ./codegen.json"
   },
